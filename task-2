@@ -1,0 +1,43 @@
+answer=""
+def add(n1,n2):
+  return n1+n2
+
+#substraction
+def sub(n1,n2):
+  return n1-n2
+
+#multiplication
+def mul(n1,n2):
+  return n1*n2
+
+#divison
+def div(n1,n2):
+  return n1/n2
+
+s = { 
+  "+": add,
+  "-": sub,
+  "*": mul,
+  "/": div
+    }
+
+num1=int(input("what's your first number? "))
+num2=int(input("what's your second number? "))
+
+for i in s:
+  print(i)
+operations = input("what's your opeartion ? ")
+
+f=s[operations]
+answer=f(num1,num2)
+
+
+print(f"{num1} {operations} {num2} = {answer}")
+
+num3=int(input("pick an another no."))
+operations = input("what's your opeartion ? ")
+
+f=s[operations]
+answer=f(answer,num3)
+
+print(f"{answer} {operations} {num3} = {answer}")
